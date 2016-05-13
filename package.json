@@ -1,0 +1,19 @@
+{
+  "name": "mixdesk",
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^1.0.1",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "electron-cookies": "^1.1.0"
+  }
+}
