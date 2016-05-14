@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "dist:osx": "node_modules/.bin/electron-packager . --platform=darwin --arch=x64 --overwrite --icon=icon.icns --out dist --ignore='node_modules/esli*'"
   },
   "license": "MIT",
   "devDependencies": {
+    "electron-packager": "^7.0.1",
     "electron-prebuilt": "^1.0.1",
     "eslint": "^2.9.0",
     "eslint-config-airbnb-base": "^3.0.1",
