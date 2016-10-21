@@ -5,6 +5,7 @@ const app = electron.app;
 const globalShortcut = electron.globalShortcut;
 const BrowserWindow = electron.BrowserWindow;
 const NativeImage = electron.nativeImage;
+const setupMainMenu = require('./main-menu');
 
 let mainWindow = null;
 let lastNowPlaying = null;
@@ -76,10 +77,12 @@ function createWindow() {
   mainWindow.on('closed', function onClose() {
     mainWindow = null;
   });
+  setupMainMenu(app);
   globalShortcut.register('MediaPlayPause', function handlePlayPause() {
     if (!mainWindow) return;
     execJS("$('.player-control').click()").then(updateTitle);
   });
+
   setInterval(updateTitle, 5000);
 }
 
